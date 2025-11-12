@@ -8,7 +8,13 @@
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; line-height: 1.6; color: #c9d1d9; background-color: #0d1117; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
     
     <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-        <div style="background-color: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 32px; box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);">
+        <div style="position: relative;">
+            <!-- Outer gradient blur layer -->
+            <div style="position: absolute; top: -20px; left: -20px; right: -20px; bottom: -20px; background: linear-gradient(135deg, #2ea043 0%, #56d364 25%, #58a6ff 50%, #7c3aed 75%, #a855f7 100%); border-radius: 16px; opacity: 0.9; filter: blur(25px); z-index: 0; pointer-events: none;"></div>
+            <!-- Inner gradient blur layer -->
+            <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: linear-gradient(225deg, #3fb950 0%, #1f6feb 30%, #6366f1 60%, #8b5cf6 100%); border-radius: 16px; opacity: 0.7; filter: blur(15px); z-index: 0; pointer-events: none;"></div>
+            <!-- Main content card -->
+            <div style="position: relative; background-color: #161b22; border: 2px solid rgba(240, 255, 240, 0.95); border-radius: 16px; padding: 32px; box-shadow: 0 12px 48px rgba(140, 149, 159, 0.3); backdrop-filter: blur(10px); z-index: 1;">
             
             <h1 style="color: #ffffff; font-size: 2rem; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.25;">Next Steps for Your Mobile App</h1>
             
@@ -41,6 +47,7 @@
                 </p>
             </div>
             
+            </div>
         </div>
         
         <div style="text-align: center; margin-top: 24px; padding: 0 20px;">
